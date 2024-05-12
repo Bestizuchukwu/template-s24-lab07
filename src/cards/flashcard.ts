@@ -32,9 +32,9 @@ function newFlashCard (question: string, answer: string): FlashCard {
       return 'FlashCard[' + question + ', ' + answer + ']'
     },
     equals: function (otherCard: FlashCard): boolean {
-      return otherCard.getAnswer() === answer && otherCard.getQuestion() === question
+      return otherCard.getAnswer().toLowerCase() === answer.toLowerCase() && otherCard.getQuestion().toLowerCase() === question.toLowerCase()
     }
   }
-};
+}
 
 export { FlashCard, newFlashCard }
